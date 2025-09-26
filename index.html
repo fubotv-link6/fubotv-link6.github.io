@@ -13,63 +13,89 @@
       background: #f4f6f9;
       color: #333;
     }
+    /* Hero Section */
     header {
       background: linear-gradient(135deg, #2c3e50, #34495e);
       color: #fff;
-      padding: 2rem;
+      padding: 4rem 2rem;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
     header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-      color: #ddd;
+      margin: 1rem 0;
+      font-size: 1.3rem;
+      color: #eee;
     }
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background: #2980b9;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #1f6391;
+    }
+
+    /* Blog Section */
     main {
       max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
     }
     .card {
+      display: flex;
+      flex-wrap: wrap;
       background: #fff;
-      padding: 1.5rem;
+      margin-bottom: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease-in-out;
+      overflow: hidden;
     }
-    .card:hover {
-      transform: translateY(-5px);
+    .card:nth-child(even) {
+      flex-direction: row-reverse;
     }
-    .card h2 {
+    .card img {
+      flex: 1 1 300px;
+      max-width: 100%;
+      height: auto;
+    }
+    .card-content {
+      flex: 2 1 400px;
+      padding: 1.5rem;
+    }
+    .card-content h2 {
       margin-top: 0;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: #2c3e50;
     }
-    .card small {
+    .card-content small {
       color: #888;
     }
-    .card p {
-      margin: 0.5rem 0 1rem;
+    .card-content p {
+      margin: 0.8rem 0 1rem;
     }
-    .card a {
+    .card-content a {
       color: #2980b9;
       text-decoration: none;
       font-weight: bold;
     }
-    .card a:hover {
+    .card-content a:hover {
       text-decoration: underline;
     }
+
+    /* Footer */
     footer {
       text-align: center;
       background: #2c3e50;
       color: #fff;
-      padding: 1rem;
+      padding: 1.5rem;
       margin-top: 2rem;
     }
   </style>
@@ -78,29 +104,39 @@
 
 <header>
   <h1>FuboTV Link6 Blog</h1>
-  <p>Guides, Tutorials, and Tips for Streaming with FuboTV</p>
+  <p>Your one-stop destination for guides, tutorials, and tips about streaming with FuboTV.</p>
+  <a href="#posts" class="btn">Start Reading</a>
 </header>
 
-<main>
+<main id="posts">
   <div class="card">
-    <h2>How to Activate FuboTV on Firestick</h2>
-    <small>September 26, 2025</small>
-    <p>Learn how to install and activate FuboTV on Firestick & Fire TV using <strong>fubo.tv/link6</strong> in a few easy steps.</p>
-    <a href="#">Read More</a>
+    <img src="https://via.placeholder.com/400x250.png?text=Firestick+Setup" alt="FuboTV Firestick Guide">
+    <div class="card-content">
+      <h2>How to Activate FuboTV on Firestick</h2>
+      <small>September 26, 2025</small>
+      <p>Learn how to install and activate FuboTV on Firestick & Fire TV using <strong>fubo.tv/link6</strong> in a few easy steps.</p>
+      <a href="#">Read More</a>
+    </div>
   </div>
 
   <div class="card">
-    <h2>FuboTV Setup Guide for Beginners</h2>
-    <small>September 25, 2025</small>
-    <p>A complete beginner’s guide to setting up FuboTV, from signing up to activating it on different devices.</p>
-    <a href="#">Read More</a>
+    <img src="https://via.placeholder.com/400x250.png?text=FuboTV+Setup" alt="FuboTV Setup Guide">
+    <div class="card-content">
+      <h2>FuboTV Setup Guide for Beginners</h2>
+      <small>September 25, 2025</small>
+      <p>A complete beginner’s guide to setting up FuboTV, from signing up to activating it on different devices.</p>
+      <a href="#">Read More</a>
+    </div>
   </div>
 
   <div class="card">
-    <h2>Tips to Improve Your FuboTV Streaming</h2>
-    <small>September 24, 2025</small>
-    <p>Discover ways to avoid buffering, optimize video quality, and get the best streaming experience with FuboTV.</p>
-    <a href="#">Read More</a>
+    <img src="https://via.placeholder.com/400x250.png?text=Streaming+Tips" alt="FuboTV Tips">
+    <div class="card-content">
+      <h2>Tips to Improve Your FuboTV Streaming</h2>
+      <small>September 24, 2025</small>
+      <p>Discover ways to avoid buffering, optimize video quality, and get the best streaming experience with FuboTV.</p>
+      <a href="#">Read More</a>
+    </div>
   </div>
 </main>
 
